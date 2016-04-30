@@ -29,12 +29,12 @@ module.exports = function(robot) {
 
 
 
-	robot.respond(/open the (.*) doors/i, function(response) {
-		var doorType;
-		doorType = response.match[1];
-		if (doorType === "pod bay") {
-			return response.reply("I'm afraid I can't let you do that.");
-		} else {
-			return response.reply("Opening " + doorType + " doors");
-		}
-	});
+	// robot.respond(/open the (.*) doors/i, function(response) {
+	// 	var doorType;
+	// 	doorType = response.match[1];
+	// 	if (doorType === "pod bay") {
+	// 		return response.reply("I'm afraid I can't let you do that.");
+	// 	} else {
+	// 		return response.reply("Opening " + doorType + " doors");
+	// 	}
+	// });
