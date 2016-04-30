@@ -28,7 +28,7 @@ module.exports = function(robot) {
 	});
 
 
-
+//make me a sandwhich test
 	robot.respond(/open the (.*) doors/i, function(response) {
 		var doorType;
 		doorType = response.match[1];
@@ -38,4 +38,11 @@ module.exports = function(robot) {
 			return response.reply('Opening ' + doorType + ' doors');
 		}
 	});
+
+//listen for studnet name
+	robot.hear(/pie/i, function(response) {
+		response.reply"did you say pie?!");
+	});
+
+
 };
