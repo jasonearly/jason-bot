@@ -19,10 +19,22 @@ module.exports = function(robot) {
 
 	// hubot greeting.
 	// (hi|hello) - say hi to your butler
+
+	//var class = ['allisonschaffer','angelarivera','aroemig','gordo','lizsdregas','jasonearly','amatras35','geoff','gregscannell','jen','kistler','ksella','mpatel12']
+
 	robot.respond(/hi|hello/i, function(response) {
-		//var class = ['allisonschaffer','angelarivera','aroemig','gordo','lizsdregas','jasonearly','amatras35','geoff','gregscannell','jen','kistler','ksella','mpatel12']
 		var user = robot.brain.userForName('jasonearly');
 		response.reply('Howdy ' + user.real_name + '!');
 	});
 
-};
+
+
+robot.respond(/open the (.*) doors/i, function(res) {
+  var doorType;
+  doorType = res.match[1];
+  if (doorType === "pod bay") {
+    return res.reply("I'm afraid I can't let you do that.");
+  } else {
+    return res.reply("Opening " + doorType + " doors");
+  }
+});
