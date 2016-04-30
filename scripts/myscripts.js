@@ -38,4 +38,4 @@ module.exports = function(robot) {
 			return response.reply('Opening ' + doorType + ' doors');
 		}
 	});
-}
+};
