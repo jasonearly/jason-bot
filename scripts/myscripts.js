@@ -17,4 +17,11 @@ module.exports = function(robot) {
 		response.reply('Call on ' + user.real_name + '!');
 	});
 
+	// hubot greeting.
+	// (hi|hello) - say hi to your butler
+	robot.respond(/hi|hello/i, function(response) {
+		var user = robot.brain.userForName('jasonearly');
+		response.reply('Howdy ' + user.real_name + '!');
+	});
+
 };
