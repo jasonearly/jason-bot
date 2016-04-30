@@ -20,7 +20,8 @@ module.exports = function(robot) {
 	// hubot greeting.
 	// (hi|hello) - say hi to your butler
 	robot.respond(/hi|hello/i, function(response) {
-		var user = robot.brain.userForName('jasonearly');
+		var class = ['allisonschaffer','angelarivera','aroemig','gordo','lizsdregas','jasonearly','amatras35','geoff','gregscannell','jen','kistler','ksella','mpatel12']
+		var user = robot.brain.userForName(class[i]);
 		response.reply('Howdy ' + user.real_name + '!');
 	});
 
