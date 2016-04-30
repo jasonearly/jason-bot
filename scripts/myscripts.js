@@ -41,7 +41,7 @@ module.exports = function(robot) {
 
 //listen for studnet name
 	robot.hear(/pie/i, function(response) {
-		response.reply"did you say pie?!");
+		response.reply("did you say pie?!");
 	});
 
 
