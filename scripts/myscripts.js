@@ -35,7 +35,7 @@ module.exports = function(robot) {
 		if (doorType === 'pod bay') {
 			return response.reply("I'm afraid I can't let you do that.");
 		} else {
-			return response.reply('Opening ' + doorType + '' doors');
+			return response.reply('Opening ' + doorType + ' doors');
 		}
 	});
 }
