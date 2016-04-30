@@ -28,7 +28,7 @@ module.exports = function(robot) {
 	});
 
 
-//make me a sandwhich test
+//request a sandwich reply with location to nearby shop
 	robot.respond(/open the (.*) doors/i, function(response) {
 		var doorType;
 		doorType = response.match[1];
@@ -39,10 +39,26 @@ module.exports = function(robot) {
 		}
 	});
 
-//listen for studnet name
-	robot.hear(/pie/i, function(response) {
+//listen for keyword and reply with user name
+var keywords = ['pie'];
+	robot.hear(/ keywords /i, function(response) {
 		response.reply("did you say pie?!");
 	});
+
+	//listen for keyword and reply with reaction gif
+	var reactions;
+
+	reactions = [
+	"http://img.skitch.com/20100714-d6q52xajfh4cimxr3888yb77ru.jpg",
+	"https://img.skitch.com/20111026-r2wsngtu4jftwxmsytdke6arwd.png",
+	"http://cl.ly/1i0s1r3t2s2G3P1N3t3M/Screen_Shot_2011-10-27_at_9.36.45_AM.png",
+	"http://shipitsquirrel.github.com/images/squirrel.png"
+	];
+
+	return robot.hear(/ship it/i, function(msg) {
+	return msg.send(msg.random(reactions));
+	});
+
 
 
 };
