@@ -37,8 +37,10 @@ module.exports = function(robot) {
 	robot.respond(/order me a (.*)/i, function(response) {
 		var foodType;
 		foodType = response.match[1];
+
 		if (foodType === 'malort') {
 			response.reply('As your friend, I\'m not going to do that for you.');
+
 		} else {
 			response.reply('I\'m just a simple bot. You\'ll have to order that ' + foodType + ' yourself.');
 		}
@@ -54,6 +56,7 @@ module.exports = function(robot) {
 		'Malort, what soap washes its mouth out with.',
 		'Did you know, Malort is NOT actually flavored with gasoline?'
 	];
+
 	robot.hear(/malort/i, function(msg) {
 		msg.send(msg.random(malortReaction));
 	});
