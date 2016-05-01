@@ -38,9 +38,9 @@ module.exports = function(robot) {
 		var foodType;
 		foodType = response.match[1];
 		if (foodType === 'malort') {
-			return response.reply("As your friend, I\'m not going to do that for you.");
+			response.reply('As your friend, I\'m not going to do that for you.');
 		} else {
-			return response.reply('I\'m just a simple bot. You\'ll have to order that' + foodType + 'yourself.');
+			 response.reply('I\'m just a simple bot. You\'ll have to order that ' + foodType + ' yourself.');
 		}
 	});
 
@@ -54,7 +54,7 @@ module.exports = function(robot) {
 	'Did you know, Malort is NOT actually flavored with gasoline?'
 	];
 	robot.hear(/malort/i, function(msg) {
-		return msg.send(msg.random(malortReaction));
+		 msg.send(msg.random(malortReaction));
 	});
 
 
@@ -64,14 +64,14 @@ module.exports = function(robot) {
 	var reactions;
 
 	reactions = [
-	"http://img.skitch.com/20100714-d6q52xajfh4cimxr3888yb77ru.jpg",
-	"https://img.skitch.com/20111026-r2wsngtu4jftwxmsytdke6arwd.png",
-	"http://cl.ly/1i0s1r3t2s2G3P1N3t3M/Screen_Shot_2011-10-27_at_9.36.45_AM.png",
-	"http://shipitsquirrel.github.com/images/squirrel.png"
+	'http://img.skitch.com/20100714-d6q52xajfh4cimxr3888yb77ru.jpg',
+	'https://img.skitch.com/20111026-r2wsngtu4jftwxmsytdke6arwd.png',
+	'http://cl.ly/1i0s1r3t2s2G3P1N3t3M/Screen_Shot_2011-10-27_at_9.36.45_AM.png',
+	'http://shipitsquirrel.github.com/images/squirrel.png'
 	];
 
-	return robot.hear(/ship it/i, function(msg) {
-	return msg.send(msg.random(reactions));
+	robot.hear(/ship it/i, function(msg) {
+	msg.send(msg.random(reactions));
 	});
 
 
