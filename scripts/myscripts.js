@@ -65,9 +65,7 @@ module.exports = function(robot) {
 
 
 	//listen for keyword and reply with reaction gif
-	var reactions;
-
-	reactions = [
+	var reactions = [
 		'http://giphy.com/gifs/l3L7OwIVLGIG4ThuM/html5',
 		'http://giphy.com/gifs/xT1XGHkP7hqm0JvWrS/html5',
 		'http://giphy.com/gifs/l3L7Yujvb5gC7MjFm/html5',
