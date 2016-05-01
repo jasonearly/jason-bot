@@ -68,9 +68,9 @@ module.exports = function(robot) {
 	var reactions;
 
 	reactions = [
-		'http://giphy.com/gifs/l3L7OwIVLGIG4ThuM/html5',
-		'http://giphy.com/gifs/xT1XGHkP7hqm0JvWrS/html5',
-		'http://giphy.com/gifs/l3L7Yujvb5gC7MjFm/html5',
+		'YAY! ' + 'http://giphy.com/gifs/l3L7OwIVLGIG4ThuM/html5',
+		'Boom! '+ 'http://giphy.com/gifs/xT1XGHkP7hqm0JvWrS/html5',
+		'PAAAARTY! ' + 'http://giphy.com/gifs/l3L7Yujvb5gC7MjFm/html5',
 		'http://giphy.com/gifs/zujkOi1kkLRzG/html5',
 		'http://giphy.com/gifs/6nuiJjOOQBBn2/html5',
 		'http://giphy.com/gifs/gpXfKa9xLAR56/html5'
