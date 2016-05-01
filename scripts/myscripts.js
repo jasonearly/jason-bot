@@ -51,7 +51,7 @@ module.exports = function(robot) {
 	"Here's a fun game. Order a shot of Malort for your visiting friends. See if they speak to you ever again.",
 	"Fun fact: Malort was sold as 'medicinal alcohol' during prohibition.",
 	"Malort, what soap washes its mouth out with.",
-	"It’s not actually flavored with gasoline"
+	"Did you know, it’s NOT actually flavored with gasoline?"
 	];
 	robot.hear(/malort/i, function(msg) {
 		return msg.send(msg.random(malortReaction));
