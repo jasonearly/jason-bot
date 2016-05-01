@@ -17,6 +17,11 @@ module.exports = function(robot) {
 		response.reply('Call on ' + user.real_name + '!');
 	});
 
+
+
+
+
+
 	// hubot greeting.
 	// (hi|hello) - say hi to your butler
 
@@ -39,11 +44,16 @@ module.exports = function(robot) {
 		}
 	});
 
+
+
 //listen for keyword and reply with user name
-var keywords = ['pie'];
-	robot.hear(/ keywords /i, function(response) {
-		response.reply("did you say pie?!");
+	var malortReaction = ["Did you say malort?? We must never speak of this"];
+	robot.hear(/malort/i, function(msg) {
+		return msg.send(msg.random(malortReaction));
 	});
+
+
+
 
 	//listen for keyword and reply with reaction gif
 	var reactions;
