@@ -47,7 +47,12 @@ module.exports = function(robot) {
 
 
 //listen for keyword and reply with user name
-	var malortReaction = ["Did you say malort?? We must never speak of this"];
+	var malortReaction = ["Did you say malort?? We must never speak of this",
+	"Here's a fun game. Order a shot of Malort for your visiting friends. See if they speak to you ever again.",
+	"Fun fact: Malort was sold as 'medicinal alcohol' during prohibition.",
+	"Malort, what soap washes its mouth out with.",
+	"It’s not actually flavored with gasoline"
+	];
 	robot.hear(/malort/i, function(msg) {
 		return msg.send(msg.random(malortReaction));
 	});
