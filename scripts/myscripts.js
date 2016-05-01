@@ -64,7 +64,7 @@ module.exports = function(robot) {
 	var reactions;
 
 	reactions = [
-	'http://i.giphy.com/l3L7Yujvb5gC7MjFm.gif',
+	'http://i.giphy.com/l3L7Yujvb5gC7MjFm.gif'
 
 	];
 
