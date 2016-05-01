@@ -70,7 +70,7 @@ module.exports = function(robot) {
 	'http://shipitsquirrel.github.com/images/squirrel.png'
 	];
 
-	robot.hear(/ship it/i, function(msg) {
+	robot.hear(/celebrate/i, function(msg) {
 	msg.send(msg.random(reactions));
 	});
 
