@@ -33,25 +33,25 @@ module.exports = function(robot) {
 	});
 
 
-//request a sandwich reply with location to nearby shop
-	robot.respond(/open the (.*) doors/i, function(response) {
-		var doorType;
-		doorType = response.match[1];
-		if (doorType === 'pod bay') {
-			return response.reply("I'm afraid I can't let you do that.");
+//request a food item reply options
+	robot.respond(/order me a (.*)/i, function(response) {
+		var foodType;
+		foodType = response.match[1];
+		if (foodType === 'malort') {
+			return response.reply("As your friend, I\'m not going to do that for you.");
 		} else {
-			return response.reply('Opening ' + doorType + ' doors');
+			return response.reply('I\'m just a simple bot. You\'ll have to order that' + foodType + 'yourself.');
 		}
 	});
 
 
 
 //listen for keyword and reply
-	var malortReaction = ['Did you say malort?? We must never speak of this',
+	var malortReaction = ['Did you say Malort?? We must never speak of this',
 	'Here\'s a fun game. Order a shot of Malort for your visiting friends. See if they speak to you ever again.',
 	'Fun fact: Malort was sold as \'medicinal alcohol\' during prohibition.',
 	'Malort, what soap washes its mouth out with.',
-	'Did you know, it’s NOT actually flavored with gasoline?'
+	'Did you know, Malort is NOT actually flavored with gasoline?'
 	];
 	robot.hear(/malort/i, function(msg) {
 		return msg.send(msg.random(malortReaction));
