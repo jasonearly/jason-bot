@@ -40,21 +40,22 @@ module.exports = function(robot) {
 		if (foodType === 'malort') {
 			response.reply('As your friend, I\'m not going to do that for you.');
 		} else {
-			 response.reply('I\'m just a simple bot. You\'ll have to order that ' + foodType + ' yourself.');
+			response.reply('I\'m just a simple bot. You\'ll have to order that ' + foodType + ' yourself.');
 		}
 	});
 
 
 
 //listen for keyword and reply
-	var malortReaction = ['Did you say Malort?? We must never speak of this',
-	'Here\'s a fun game. Order a shot of Malort for your visiting friends. See if they speak to you ever again.',
-	'Fun fact: Malort was sold as \'medicinal alcohol\' during prohibition.',
-	'Malort, what soap washes its mouth out with.',
-	'Did you know, Malort is NOT actually flavored with gasoline?'
+	var malortReaction = [
+		'Did you say Malort?? We must never speak of this',
+		'Here\'s a fun game. Order a shot of Malort for your visiting friends. See if they speak to you ever again.',
+		'Fun fact: Malort was sold as \'medicinal alcohol\' during prohibition.',
+		'Malort, what soap washes its mouth out with.',
+		'Did you know, Malort is NOT actually flavored with gasoline?'
 	];
 	robot.hear(/malort/i, function(msg) {
-		 msg.send(msg.random(malortReaction));
+		msg.send(msg.random(malortReaction));
 	});
 
 
@@ -64,16 +65,16 @@ module.exports = function(robot) {
 	var reactions;
 
 	reactions = [
-	'http://giphy.com/gifs/l3L7OwIVLGIG4ThuM/html5',
-	'http://giphy.com/gifs/xT1XGHkP7hqm0JvWrS/html5',
-	'http://giphy.com/gifs/l3L7Yujvb5gC7MjFm/html5',
-	'http://giphy.com/gifs/zujkOi1kkLRzG/html5',
-	'http://giphy.com/gifs/6nuiJjOOQBBn2/html5',
-	'http://giphy.com/gifs/gpXfKa9xLAR56/html5'
+		'http://giphy.com/gifs/l3L7OwIVLGIG4ThuM/html5',
+		'http://giphy.com/gifs/xT1XGHkP7hqm0JvWrS/html5',
+		'http://giphy.com/gifs/l3L7Yujvb5gC7MjFm/html5',
+		'http://giphy.com/gifs/zujkOi1kkLRzG/html5',
+		'http://giphy.com/gifs/6nuiJjOOQBBn2/html5',
+		'http://giphy.com/gifs/gpXfKa9xLAR56/html5'
 	];
 
 	robot.hear(/celebrate|party|yay|boom/i, function(msg) {
-	msg.send(msg.random(reactions));
+		msg.send(msg.random(reactions));
 	});
 
 
