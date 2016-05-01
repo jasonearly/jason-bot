@@ -64,11 +64,15 @@ module.exports = function(robot) {
 	var reactions;
 
 	reactions = [
-	'http://i.giphy.com/l3L7Yujvb5gC7MjFm.gif'
-
+	'http://i.giphy.com/l3L7Yujvb5gC7MjFm.gif',
+	'http://i.giphy.com/l3L7OwIVLGIG4ThuM.gif',
+	'http://i.giphy.com/xT1XGHkP7hqm0JvWrS.gif',
+	'http://i.giphy.com/zujkOi1kkLRzG.gif',
+	'http://i.giphy.com/6nuiJjOOQBBn2.gif',
+	'http://i.giphy.com/gpXfKa9xLAR56.gif'
 	];
 
-	robot.hear(/celebrate/i, function(msg) {
+	robot.hear(/celebrate|party|yay|boom/i, function(msg) {
 	msg.send(msg.random(reactions));
 	});
 
