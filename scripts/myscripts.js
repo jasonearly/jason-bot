@@ -18,10 +18,6 @@ module.exports = function(robot) {
 	// });
 
 
-
-
-
-
 	// hubot greeting.
 	// (hi|hello) - say hi to your butler
 
@@ -48,7 +44,7 @@ module.exports = function(robot) {
 
 
 
-//listen for keyword and reply
+//listen for keyword (malort) and reply
 	var malortReaction = [
 		'Did you say Malort?? We must never speak of this',
 		'Here\'s a fun game. Order a shot of Malort for your visiting friends. See if they speak to you ever again.',
@@ -60,7 +56,6 @@ module.exports = function(robot) {
 	robot.hear(/malort/i, function(msg) {
 		msg.send(msg.random(malortReaction));
 	});
-
 
 
 
