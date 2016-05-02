@@ -41,19 +41,19 @@ module.exports = function(robot) {
 	});
 
 
-	var userForMentionName;
+	// var userForMentionName;
 
-	userForMentionName = function(name) {
-		var k, lowerName, mentionName, result;
-		result = null;
-		lowerName = name.toLowerCase();
-		for (k in robot.brain.data.users || {}) {
-			mentionName = robot.brain.data.users[k]['mention_name'];
-			if ((mentionName !== null) && mentionName.toLowerCase() === lowerName) {
-				result = robot.brain.data.users[k];
-			}
-		}
-		return result;
-	};
+	// userForMentionName = function(name) {
+	// 	var k, lowerName, mentionName, result;
+	// 	result = null;
+	// 	lowerName = name.toLowerCase();
+	// 	for (k in robot.brain.data.users || {}) {
+	// 		mentionName = robot.brain.data.users[k]['mention_name'];
+	// 		if ((mentionName !== null) && mentionName.toLowerCase() === lowerName) {
+	// 			result = robot.brain.data.users[k];
+	// 		}
+	// 	}
+	// 	return result;
+	// };
 
 };
