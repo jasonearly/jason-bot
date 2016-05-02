@@ -32,7 +32,7 @@ module.exports = function(robot) {
 
 
 
-  return robot.respond(/who is @?([\w .\-]+)\?*$/i, function(response) {
+  return robot.respond(/who @?([\w .\-]+)\?*$/i, function(response) {
     var name, user, users;
     name = res.match[1].trim();
     users = robot.brain.usersForFuzzyName(name);
