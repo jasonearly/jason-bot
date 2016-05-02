@@ -35,7 +35,7 @@ module.exports = function(robot) {
 
 	robot.respond(/mentionname is (.+)/i, function(msg) {
 		//var mentionname, user;
-		var mentionName = msg.match[2];
+		var mentionName = msg.match[1];
 		//user = robot.brain.userForId(msg.envelope.user.id);
 		//return user.mentionname = mentionname;
 		response.reply('Call on ' + mentionName + '!');
