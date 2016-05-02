@@ -44,7 +44,17 @@ module.exports = function(robot) {
 		//var mentionName = response.match[1];
 		//user = robot.brain.userForId(response.envelope.user.id);
 		//return user.mentionname = mentionname;
-		response.reply(helpQueue[0] );
+		response.reply('You have been added to the queue' );
+	});
+
+	robot.hear(/help next/i, function(response) {
+		var helpQueue = [];
+		var next = helpQueue.shift();
+		//mentionname
+		//var mentionName = response.match[1];
+		//user = robot.brain.userForId(response.envelope.user.id);
+		//return user.mentionname = mentionname;
+		response.reply(next);
 	});
 
 
