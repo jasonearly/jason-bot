@@ -38,11 +38,13 @@ module.exports = function(robot) {
 	robot.respond(/(.+) needs help with (.+)/i, function(response) {
 		var user = response.match[1];
 		var topic = response.match[2];
+		var helpQueue = [];
+		helpQueue.push('Help ' + user + ' with ' + topic);
 		//mentionname
 		//var mentionName = response.match[1];
 		//user = robot.brain.userForId(response.envelope.user.id);
 		//return user.mentionname = mentionname;
-		response.reply('Help ' + user + ' with ' + topic );
+		response.reply(helpQueue[0] );
 	});
 
 
