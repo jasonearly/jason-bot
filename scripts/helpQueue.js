@@ -33,12 +33,12 @@ module.exports = function(robot) {
 	// 	return helpQue size "there are # of people in the queue"
 	// }
 
-
+var helpQueue = [];
 
 	robot.respond(/(.+) needs help with (.+)/i, function(response) {
 		var user = response.match[1];
 		var topic = response.match[2];
-		var helpQueue = [];
+
 		helpQueue.push('Help ' + user + ' with ' + topic);
 		//mentionname
 		//var mentionName = response.match[1];
@@ -48,7 +48,6 @@ module.exports = function(robot) {
 	});
 
 	robot.hear(/help next/i, function(response) {
-		var helpQueue = [];
 		var next = helpQueue.shift();
 		//mentionname
 		//var mentionName = response.match[1];
