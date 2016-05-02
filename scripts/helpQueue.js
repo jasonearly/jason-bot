@@ -2,25 +2,6 @@
 
 module.exports = function(robot) {
 
-	// // robot.hear() will have the robot listen in on any channel it's in
-	// robot.hear(/badger/i, function(response) {
-	// 	response.send("Badgers? BADGERS? WE DON'T NEED NO STINKIN BADGERS");
-	// });
-
-	// robot.hear(/i dislike (.+)/i, function(response) {
-	// 	var like = response.match[1];
-	// 	// response.reply() will have the robot at-mention you when it responds
-	// 	response.reply('I also dislike ' + like);
-	// });
-
-	// // robot.respond() means the robot will only reply when at-mentioned or DMed
-	// robot.respond(/who should i call on today\?/i, function(response) {
-	// 	var user = robot.brain.userForName('gordo');
-	// 	response.reply('Call on ' + user.real_name + '!');
-	// });
-
-
-
 // student helpQueue script
 	// userName posts "help with [topic]"
 	// userName + [topic] gets pushed() to helpQue[ ]
@@ -33,43 +14,20 @@ module.exports = function(robot) {
 	// 	return helpQue size "there are # of people in the queue"
 	// }
 
-var helpQueue = [];
+	var helpQueue = [];
 
-	robot.respond(/(.+) needs help with (.+)/i, function(response) {
+	robot.hear(/(.+) needs help with (.+)/i, function(response) {
 		var user = response.match[1];
 		var topic = response.match[2];
 
 		helpQueue.push('Help ' + user + ' with ' + topic);
-		//mentionname
-		//var mentionName = response.match[1];
-		//user = robot.brain.userForId(response.envelope.user.id);
-		//return user.mentionname = mentionname;
 		response.reply('You have been added to the queue' );
 	});
 
 	robot.hear(/help next/i, function(response) {
 		var next = helpQueue.shift();
-		//mentionname
-		//var mentionName = response.match[1];
-		//user = robot.brain.userForId(response.envelope.user.id);
-		//return user.mentionname = mentionname;
 		response.reply(next);
 	});
 
-
-	// var userForMentionName;
-
-	// userForMentionName = function(name) {
-	// 	var k, lowerName, mentionName, result;
-	// 	result = null;
-	// 	lowerName = name.toLowerCase();
-	// 	for (k in robot.brain.data.users || {}) {
-	// 		mentionName = robot.brain.data.users[k]['mention_name'];
-	// 		if ((mentionName !== null) && mentionName.toLowerCase() === lowerName) {
-	// 			result = robot.brain.data.users[k];
-	// 		}
-	// 	}
-	// 	return result;
-	// };
 
 };
