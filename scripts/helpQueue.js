@@ -31,14 +31,13 @@ module.exports = function(robot) {
 
 
 
-
-  return robot.respond(/who @?([\w .\-]+)\?*$/i, function(response) {
+	robot.respond(/who @?([\w .\-]+)\?*$/i, function(response) {
     var name, user, users;
-    name = res.match[1].trim();
+    name = response.match[1].trim();
     users = robot.brain.usersForFuzzyName(name);
     if (users.length === 1) {
       user = users[0];
-      return response.send(name + " is user - " + user);
+      response.send(name + " is user - " + user);
     }
   });
 
