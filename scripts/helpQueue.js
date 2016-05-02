@@ -1,5 +1,3 @@
-//HelpQueue is in progress and may display a bunch of nonsense code
-
 module.exports = function(robot) {
 
 // student helpQueue script
