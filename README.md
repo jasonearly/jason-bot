@@ -24,8 +24,8 @@ hubot yay | celebrate | party | boom - hubot listens for keyword and posts a ran
 
 
 ####helpQueue
-_username_ needs help with _topic_ - hubot listens and adds the help request to a queue and replys to user.
- 'help next' - hubot responds with who needs help and with what topic.
+_username_ needs help with _topic_ - hubot listens and adds the help request to a queue and replys to user. \s\s
+'help next' - hubot responds with who needs help and with what topic.
 
 
 
