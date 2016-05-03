@@ -28,11 +28,11 @@ module.exports = function(robot) {
 	});
 
 
-	// // robot.respond() means the robot will only reply when at-mentioned or DMed
-	// robot.respond(/who should i call on today\?/i, function(response) {
-	// 	var user = robot.brain.userForName('gordo')
-	// 	response.reply('Call on ' + user.real_name + '!')
-	// })
+	// robot.respond() means the robot will only reply when at-mentioned or DMed
+	robot.respond(/who should i call on today\?/i, function(response) {
+		var user = robot.brain.userForName('gordo')
+		response.reply('Call on ' + user.real_name + '!')
+	})
 
 
 
