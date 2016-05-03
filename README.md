@@ -12,7 +12,7 @@ I dislike 'input' - hubot hears and responds in agreement
 
 
 ####hubot greeting
-hubot hi | hello - hubot responds with 'Howdy <user real name>'
+hubot hi | hello - hubot responds with 'Howdy _user real name_
 
 
 ####Food request
