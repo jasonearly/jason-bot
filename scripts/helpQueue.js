@@ -31,22 +31,21 @@ module.exports = function(robot) {
 
 
 
-	robot.respond(/who @?([\w .\-]+)\?*$/i, function(response) {
+
+  robot.respond(/who is @?([\w .\-]+)\?*$/i, function(response) {
     var name, user, users;
-    name = response.match[1].trim();
+    name = res.match[1].trim();
     users = robot.brain.usersForFuzzyName(name);
     if (users.length === 1) {
       user = users[0];
-      response.send(name + " is user - " + user);
+//do something here
+
+     response.send(name + " is user - " + user);
     }
   });
 
 
-  return robot.listen(function(message) {
-    return message.user.name === "Jason" && Math.random() > 0.8;
-  }, function(response) {
-    return response.reply("HI JASON! YOU'RE MY BEST FRIEND! (but only like " + (response.match * 100) + "% of the time)");
-  });
+
 
 
 };
