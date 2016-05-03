@@ -28,19 +28,23 @@ module.exports = function(robot) {
 	});
 
 
-
+	// // robot.respond() means the robot will only reply when at-mentioned or DMed
+	// robot.respond(/who should i call on today\?/i, function(response) {
+	// 	var user = robot.brain.userForName('gordo')
+	// 	response.reply('Call on ' + user.real_name + '!')
+	// })
 
 
 
   robot.respond(/who is @?([\w .\-]+)\?*$/i, function(response) {
     var name, user, users;
     name = response.match[1];
-    users = robot.brain.usersForFuzzyName(name);
+    users = robot.brain.userForName(name);
     if (users.length === 1) {
       user = users[0];
 //do something here
 
-     response.send(name + " is user - " + user);
+     response.send(name + " is user - " + user.real_name);
     }
   });
 
