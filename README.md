@@ -24,8 +24,7 @@ hubot yay | celebrate | party | boom - hubot listens for keyword and posts a ran
 
 
 ####helpQueue
-hubot <trigger> - <what the respond trigger does>
-'<username> needs help with <topic>' - hubot listens and adds the help request to a queue and replys to user.
+_username_ needs help with _topic_ - hubot listens and adds the help request to a queue and replys to user.
 'help next' - hubot responds with who needs help and with what topic.
 
 
