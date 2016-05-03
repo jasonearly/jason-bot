@@ -7,8 +7,26 @@ deployed on [Heroku][heroku] to get you up and running as quick as possible.
 
 
 ### Commands:
-  hubot <trigger> - <what the respond trigger does>
-  <trigger> - <what the hear trigger does>
+####Dislike
+'I dislike <input>' - hubot hears and responds in agreement
+
+
+####hubot greeting
+hubot <hi or hello> - hubot responds with 'Howdy <user real name>'
+
+
+####Food request
+hubot 'order me a <input>' - hubot responds with 'You'll have to order that <input> yourself'
+
+
+####Gif reaction
+hubot 'yay | celebrate | party | boom' - hubot listens for keyword and posts a random celebratory gif'
+
+
+####helpQueue
+hubot <trigger> - <what the respond trigger does>
+'<username> needs help with <topic>' - hubot listens and adds the help request to a queue and replys to user.
+'help next' - hubot responds with who needs help and with what topic.
 
 
 
