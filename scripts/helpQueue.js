@@ -13,7 +13,6 @@ module.exports = function(robot) {
 	// }
 
 	var helpQueue = [];
-	var users = [];
 
 	robot.hear(/(.+) needs help with (.+)/i, function(response) {
 		var user = response.match[1];
@@ -37,7 +36,9 @@ module.exports = function(robot) {
 
 
   robot.respond(/who is @?([\w .\-]+)\?*$/i, function(response) {
-    var name, user, users;
+    var name;
+    var user;
+    var users = [];
     name = response.match[1];
     users = robot.brain.usersForFuzzyName(name);
     if (users.length === 1) {
