@@ -39,12 +39,12 @@ module.exports = function(robot) {
   robot.respond(/who is @?([\w .\-]+)\?*$/i, function(response) {
     var name, user, users;
     name = response.match[1];
-    users = robot.brain.userForName(name);
+    users = robot.brain.usersForName(name);
     if (users.length === 1) {
       user = users[0];
 //do something here
 
-     response.send(name + " is user - " + user.real_name);
+     response.reply(name + " is user - " + user.real_name);
     }
   });
 
