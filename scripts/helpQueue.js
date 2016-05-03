@@ -44,7 +44,7 @@ module.exports = function(robot) {
       user = users[0];
 //do something here
 
-     response.send(name + " is user - " + user.real_name);
+     response.send(name + " is user - " + user);
     }
   });
 
