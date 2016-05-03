@@ -29,23 +29,24 @@ module.exports = function(robot) {
 
 
 	// robot.respond() means the robot will only reply when at-mentioned or DMed
-	robot.respond(/who should i call on today\?/i, function(response) {
-		var user = robot.brain.userForName('gordo');
+	robot.respond(/who is (.+)\?/i, function(response) {
+		var name = response.match[1];
+		var user = robot.brain.userForName(name);
 		response.reply('Call on ' + user.real_name + '!');
 	});
 
 
-  robot.respond(/who is @?([\w .\-]+)\?*$/i, function(response) {
-    var name;
-    var user;
-    var users = [];
-    name = response.match[1];
-    users = robot.brain.usersForFuzzyName(name);
-    if (users.length === 1) {
-      user = users[0];
-//do something here
+//   robot.respond(/who is @?([\w .\-]+)\?*$/i, function(response) {
+//     var name;
+//     var user;
+//     var users = [];
+//     name = response.match[1];
+//     users = robot.brain.usersForFuzzyName(name);
+//     if (users.length === 1) {
+//       user = users[0];
+// //do something here
 
-     response.send(name + " is user - " + user);
+//      response.send(name + " is user - " + user);
     }
   });
 
