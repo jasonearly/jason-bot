@@ -13,6 +13,7 @@ module.exports = function(robot) {
 	// }
 
 	var helpQueue = [];
+	var users = [];
 
 	robot.hear(/(.+) needs help with (.+)/i, function(response) {
 		var user = response.match[1];
@@ -30,10 +31,9 @@ module.exports = function(robot) {
 
 	// robot.respond() means the robot will only reply when at-mentioned or DMed
 	robot.respond(/who should i call on today\?/i, function(response) {
-		var user = robot.brain.userForName('gordo')
-		response.reply('Call on ' + user.real_name + '!')
-	})
-
+		var user = robot.brain.userForName('gordo');
+		response.reply('Call on ' + user.real_name + '!');
+	});
 
 
   robot.respond(/who is @?([\w .\-]+)\?*$/i, function(response) {
