@@ -8,11 +8,11 @@ deployed on [Heroku][heroku] to get you up and running as quick as possible.
 
 ### Commands:
 ####Dislike
-I dislike <input> - hubot hears and responds in agreement
+I dislike 'input' - hubot hears and responds in agreement
 
 
 ####hubot greeting
-hubot <hi or hello> - hubot responds with 'Howdy <user real name>'
+hubot hi | hello - hubot responds with 'Howdy <user real name>'
 
 
 ####Food request
