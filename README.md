@@ -12,11 +12,11 @@ I dislike _input_ - hubot hears and responds in agreement
 
 
 ####hubot greeting
-hubot hi | hello - hubot responds with 'Howdy _user real name_
+hubot hi | hello - hubot responds with 'Howdy _user real name_'
 
 
 ####Food request
-hubot order me a _input_ - hubot responds with 'You'll have to order that <input> yourself'
+hubot order me a _input_ - hubot responds with 'You'll have to order that _input_ yourself'
 
 
 ####Gif reaction
