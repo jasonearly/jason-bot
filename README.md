@@ -8,7 +8,7 @@ deployed on [Heroku][heroku] to get you up and running as quick as possible.
 
 ### Commands:
 ####Dislike
-'I dislike <input>' - hubot hears and responds in agreement
+I dislike <input> - hubot hears and responds in agreement
 
 
 ####hubot greeting
