@@ -20,7 +20,7 @@ hubot order me a _input_ - hubot responds with 'You'll have to order that _input
 
 
 ####Gif reaction
-hubot 'yay | celebrate | party | boom' - hubot listens for keyword and posts a random celebratory gif'
+hubot yay | celebrate | party | boom - hubot listens for keyword and posts a random celebratory gif
 
 
 ####helpQueue
