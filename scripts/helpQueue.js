@@ -35,7 +35,7 @@ module.exports = function(robot) {
   robot.respond(/who is @?([\w .\-]+)\?*$/i, function(response) {
     var name, user, users;
     name = response.match[1].trim();
-    users = robot.brain.usersForFuzzyName(name);
+    users = robot.brain.usersForName(name);
     if (users.length === 1) {
       user = users[0];
 //do something here
