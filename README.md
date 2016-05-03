@@ -8,23 +8,23 @@ deployed on [Heroku][heroku] to get you up and running as quick as possible.
 
 ### Commands:
 ####Dislike
-I dislike _input_ - hubot hears and responds in agreement
+'I dislike _input_' - hubot hears and responds in agreement
 
 
 ####hubot greeting
-hubot hi | hello - hubot responds with 'Howdy _user real name_'
+'hubot hi | hello' - hubot responds with 'Howdy _user real name_'
 
 
 ####Food request
-hubot order me a _input_ - hubot responds with 'You'll have to order that _input_ yourself'
+'hubot order me a _input_' - hubot responds with 'You'll have to order that _input_ yourself'
 
 
 ####Gif reaction
-hubot yay | celebrate | party | boom - hubot listens for keyword and posts a random celebratory gif
+'hubot yay | celebrate | party | boom' - hubot listens for keyword and posts a random celebratory gif
 
 
 ####helpQueue
-_username_ needs help with _topic_ - hubot listens and adds the help request to a queue and replys to user. <br>
+'_username_ needs help with _topic_' - hubot listens and adds the help request to a queue and replys to user. <br>
 'help next' - hubot responds with who needs help and with what topic.
 
 
