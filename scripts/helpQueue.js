@@ -42,6 +42,12 @@ module.exports = function(robot) {
   });
 
 
+  return robot.listen(function(message) {
+    return message.user.name === "Jason" && Math.random() > 0.8;
+  }, function(response) {
+    return response.reply("HI JASON! YOU'RE MY BEST FRIEND! (but only like " + (response.match * 100) + "% of the time)");
+  });
+
 
 };
 
