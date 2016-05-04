@@ -28,7 +28,7 @@ deployed on [Heroku][heroku] to get you up and running as quick as possible.
 'help next' - hubot responds with who needs help and with what topic.
 
 ####Yo!
-'Yo!' - hubot hears and sends a 'Yo!' to a random user
+'Yo!' - hubot hears 'Yo!' and sends a 'Yo!' to a random user
 
 
 
