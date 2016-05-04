@@ -15,7 +15,7 @@ module.exports = function(robot) {
 // This will get a list of every username
 	var userIds = Object.keys(robot.brain.data.users);
 	var listOfUsernames = userIds.map(function(userId) { return robot.brain.data.users[userId].name });
-	var randomRealName = robot.brain.data.users[userIds[Math.floor(Math.random() * userIds.length)]].user.real_name;
+	var randomRealName = robot.brain.data.users[userIds[Math.floor(Math.random() * userIds.length)]].real_name;
 
 
 
