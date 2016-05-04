@@ -27,6 +27,9 @@ deployed on [Heroku][heroku] to get you up and running as quick as possible.
 '_username_ needs help with _topic_' - hubot listens and adds the help request to a queue and replys to user. <br>
 'help next' - hubot responds with who needs help and with what topic.
 
+####Yo!
+'Yo!' - hubot hears and sends a 'Yo!' to a random user
+
 
 
 ### Generated README from generator-hubot
