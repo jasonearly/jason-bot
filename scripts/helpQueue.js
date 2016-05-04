@@ -12,6 +12,12 @@ module.exports = function(robot) {
 	// 	return helpQue size "there are # of people in the queue"
 	// }
 
+// This will get a list of every username
+	var userIds = Object.keys(robot.brain.data.users);
+	var listOfUsernames = userIds.map(function(userId) { return robot.brain.data.users[userId].name });
+
+
+
 	var helpQueue = [];
 
 	robot.hear(/(.+) needs help with (.+)/i, function(response) {
@@ -27,6 +33,10 @@ module.exports = function(robot) {
 		response.reply(next);
 	});
 
+
+	robot.hear(/users/i, function(response) {
+		response.reply(listOfUsernames);
+	});
 
 };
 
