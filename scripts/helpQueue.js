@@ -35,7 +35,7 @@ module.exports = function(robot) {
 	});
 
 
-	robot.hear(/ random user/i, function(response) {
+	robot.hear(/random user/i, function(response) {
 		response.reply(randomRealName);
 	});
 
